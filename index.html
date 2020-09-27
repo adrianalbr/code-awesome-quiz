@@ -2,26 +2,53 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Code Quiz</title>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Code Quiz</title>
 
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Bootstrap CDN -->
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- link to css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="welcome">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h1>Awesome Coding Quiz Challenge</h1>
+          <p>
+            Try to answer the following code related questions within the time
+            limit. Keep in mind that incorrect answers will penalize your score
+            time by ten seconds. Good Luck!
+          </p>
+          <button type="button" class="btn btn-primary btn-lg" id="start-quiz">
+            Start Quiz
+          </button>
+        </div>
+      </div>
+    </div>
 
-    </head>
-    <body>
+    <div class="container" id="q-a">
+      <div class="row">
+        <div class="col-sm-8" id="question-answer">
+          <p>space where Q-A is going to go</p>
+        </div>
+      </div>
+    </div>
 
-        <H1>Code Quiz</H1>
-      
-        
-
-        <!-- Javascript -->
-        <script src="script.js" async defer></script>
-    </body>
+    <!-- Javascript -->
+    <script src="script.js" async defer></script>
+  </body>
 </html>
