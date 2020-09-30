@@ -1,7 +1,5 @@
 # code-awesome-quiz
 
-# 04 Web APIs: Code Quiz
-
 ## Objective
 
 The objective of this project is to develop a quiz application using HTML, CSS Javascript and a lot of DOM manipulation.
@@ -23,10 +21,12 @@ The user has an allocated time to answer all questions, as the user submit his/h
 - Code review using coding testing tool
 
 ## Deployment
-- application is deployed here - 
-- git hub repo is here - 
+- application is deployed here - https://adrianalbr.github.io/code-awesome-quiz/index.html
+- git hub repo is here - https://github.com/adrianalbr/code-awesome-quiz
 
 ## How it works - 
+
+
 
 
 

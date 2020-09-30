@@ -159,7 +159,8 @@ function renderQuizBank() {
 function renderChoices() {
   for (var i = 0; i < quizBank[questionIndex].choices.length; i++) {
     var choiceButton = document.createElement("button");
-    choiceButton.setAttribute("style","background-color: blue;color: white;margin 10px;margin-top: 10px;margin-right: 10px;margin-left: 10px");
+    choiceButton.className = "btn btn-primary btn-lg";
+    choiceButton.id = "answerButton"
     choiceButton.setAttribute("value", quizBank[questionIndex].choices[i]);
     choiceButton.onclick = checkResponse;
     choiceButton.textContent = quizBank[questionIndex].choices[i];
