@@ -41,3 +41,13 @@
     margin-top: 100px;
 
 }
+
+.questionsDiv{
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 100px;
+}
+
+#timerWrap{
+    float: right;
+}

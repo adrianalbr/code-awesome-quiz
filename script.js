@@ -1,9 +1,9 @@
-console.log("this works somehow");
+// console.log("this works somehow");
 // array of objects for the questions and answers
 var quizBank = [
   {
     question: "Commonly used types DO NOT include",
-    choices: ["strings", "booleans", "alerts", "intgers"],
+    choices: ["strings", "booleans", "alerts", "integers"],
     answer: "alerts",
   },
 
@@ -69,7 +69,7 @@ document.getElementById("submitBtn").addEventListener("click", function (e) {
   };
   scores.push(obj);
 
-  localStorage.setItem("highscores", JSON.stringify(scores));
+  localStorage.setItem("highScores", JSON.stringify(scores));
   window.location.replace("./highScores.html");
 });
 
@@ -95,7 +95,9 @@ function countDown() {
     //call function to handle end game
     endGame();
 
-    console.log("GAME OVER TIME RAN OUT");
+    alert ("GAME OVER TIME RAN OUT");
+
+    // console.log("GAME OVER TIME RAN OUT");
   }
 }
 //start timer
@@ -120,8 +122,12 @@ function checkResponse() {
   if (res !== quizBank[questionIndex].answer) {
     //if incorrect deduct 10 from time left
     timeLeft = timeLeft - penalty;
+        // var createDiv = document.createElement("div");
+        // createDiv.setAttribute("id", "createDiv");
+        // createDiv.textContent = "Incorrect!"
     alert("Incorrect");
   } else {
+    // createDiv.textContent = "Correct!"
     alert("Correct");
   }
   
@@ -153,7 +159,7 @@ function renderQuizBank() {
 function renderChoices() {
   for (var i = 0; i < quizBank[questionIndex].choices.length; i++) {
     var choiceButton = document.createElement("button");
-    choiceButton.setAttribute("style","background-color: blue;color: white;margin 20px;margin-top: 10px;margin-right: 10px;margin-left: 10px");
+    choiceButton.setAttribute("style","background-color: blue;color: white;margin 10px;margin-top: 10px;margin-right: 10px;margin-left: 10px");
     choiceButton.setAttribute("value", quizBank[questionIndex].choices[i]);
     choiceButton.onclick = checkResponse;
     choiceButton.textContent = quizBank[questionIndex].choices[i];

@@ -9,7 +9,7 @@ clear.addEventListener("click", function () {
     location.reload();
 });
 // Retreives local stroage 
-var allScores = localStorage.getItem("allScores");
+var allScores = localStorage.getItem("highScores");
 allScores = JSON.parse(allScores);
 
 if (allScores !== null) {
