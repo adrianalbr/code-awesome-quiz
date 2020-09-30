@@ -24,27 +24,46 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container" id="welcome">
-      <div class="row">
-        <div class="col-sm-12 text-center">
-          <h1>Awesome Coding Quiz Challenge</h1>
-          <p>
-            Try to answer the following code related questions within the time
-            limit. Keep in mind that incorrect answers will penalize your score
-            time by ten seconds. Good Luck!
-          </p>
-          <button type="button" class="btn btn-primary btn-lg" id="start-quiz">
-            Start Quiz
-          </button>
+    <!-- div for wrapper -->
+    <div id="wrapper">
+      <!-- div for timer -->
+      <h3 id="timerWrap">Timer: <span id="timer-display"></span></h3>
+
+      <!-- div for quiz -->
+
+      <div class="container" id="welcome">
+        <div class="row">
+          <div class="col-sm-8 text-center">
+            <h1>Awesome Coding Quiz Challenge</h1>
+            <p>
+              Try to answer the following code related questions within the time
+              limit. Keep in mind that incorrect answers will penalize your
+              score time by ten seconds. Good Luck!
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              id="start-quiz"
+            >
+              Start Quiz
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="container" id="q-a">
-      <div class="row">
-        <div class="col-sm-8" id="question-answer">
-          <p>space where Q-A is going to go</p>
+      <div class="container" id="q-a">
+        <div class="row">
+          <div class="col-sm-8" id="question-answer"></div>
         </div>
+      </div>
+
+      <div id="formDiv" class="row">
+        <form>
+          <h5>Enter Initials</h5>
+          <input type="text" id="inputRes" />
+          <h5>Your Score: <span id="score"></span></h5>
+          <button type="submit" id="submitBtn">Submit</button>
+        </form>
       </div>
     </div>
 
