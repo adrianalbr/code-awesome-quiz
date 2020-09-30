@@ -12,36 +12,21 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <!-- div for wrapper -->
-  <div id="wrapper">
-      <!-- div for timer -->
-      <div id="currentTime"></div>
-  
-     <!-- div for quiz -->
-      
-      <div class="container" id="high-scores">
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <h1>High Scores</h1>
-            <p>
-            nnnnn
-            </p>
-            <button type="button" class="btn btn-primary btn-lg" id="start-quiz">
-              Start Quiz
-            </button>
-          </div>
-        </div>
-      </div>
-  
-      <div class="container" id="q-a">
-        <div class="row">
-          <div class="col-sm-8" id="question-answer">
-            <p>space where Q-A is going to go</p>
-          </div>
-        </div>
-      </div>
-  </div>
-        
-        <script src="" async defer></script>
+        <body>
+            <!-- Wrapper -->
+            <div id="wrapper">
+                <!-- Div for timer -->
+                <div id="currentTime"></div>
+                <!-- Div for quiz content -->
+                <div id="questionsDiv">
+                    <h1>Highscores</h1>
+                    <ul id="highScore"></ul>
+                    <!-- Buttons -->
+                    <button class="btn btn-primary btn-lg" id="goBack">Go Back</button>
+                    <button class="btn btn-primary btn-lg" id="clear" value="reset">Clear Highscore</button>
+                </div>
+            </div>
+            <script src="HighScores.js"></script>
+
     </body>
 </html>

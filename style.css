@@ -8,3 +8,36 @@
     margin-left: auto;
     margin-top: 100px;
 }
+
+.container2{
+    display: block;
+    margin-left: 200px;
+    margin-top: 0px;
+    margin-right: 0px;
+
+.high-scores{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+}
+
+
+.button{
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+.formDiv{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+
+}

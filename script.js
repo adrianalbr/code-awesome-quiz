@@ -57,14 +57,12 @@ var interval;
 var penalty = 10;
 var questionIndex = 0;
 
-// window.onload = function () {
-//   timerDisplay.textContent = "Time: 0" + timeLeft;
-// };
+// submit button when quiz ends
 document.getElementById("submitBtn").addEventListener("click", function (e) {
   e.preventDefault();
-  console.log("clicked");
+//   console.log("clicked");
   var initials = document.getElementById("inputRes").value;
-  console.log(initials, timeLeft);
+        console.log(initials, timeLeft);
   var obj = {
     user: initials,
     score: timeLeft,
@@ -72,19 +70,21 @@ document.getElementById("submitBtn").addEventListener("click", function (e) {
   scores.push(obj);
 
   localStorage.setItem("highscores", JSON.stringify(scores));
+  window.location.replace("./highScores.html");
 });
 
+// Start button for the quiz to begin
 startButton.addEventListener("click", function () {
   welcomeContainer.style.display = "none";
   timerDisplayP.style.display = "block";
 
+//  Call start timer and render quiz bank
   startTimer();
-  //render questions call function
   renderQuizBank();
-  //render choices call function
-  // renderChoices();
+ 
 });
 
+// functions and statement for the timer
 function countDown() {
   timeLeft--;
 
@@ -98,11 +98,11 @@ function countDown() {
     console.log("GAME OVER TIME RAN OUT");
   }
 }
-
+//start timer
 function startTimer() {
   interval = setInterval(countDown, 1000);
 }
-
+//end game
 function endGame() {
   console.log("ok");
   questionAnswer.style.display = "none";
@@ -112,38 +112,34 @@ function endGame() {
   //localStorage.setItem("score", timeLeft);
 }
 
+// check responses
 function checkResponse() {
-  // console.log("ok");
   //capture the users response
-  console.log(this.value);
   var res = this.value;
-  //compare response to correct anser
+  //compare response to correct answer
   if (res !== quizBank[questionIndex].answer) {
+    //if incorrect deduct 10 from time left
     timeLeft = timeLeft - penalty;
     alert("Incorrect");
   } else {
     alert("Correct");
   }
-  //if wrong
-  //- deduct 3 from timerLeft
-  // - dislay incorrect
-  //else correct
-  //- display correct
+  
   questionIndex++;
 
-  //condtional to check to see if we have any more questions to ask
+  //condition to check to see if we have any more questions to ask
   if (questionIndex === quizBank.length) {
     clearInterval(interval);
+    //if we ran out of questions then end the game
     endGame();
   } else {
+    // if there are more question continue  
     renderQuizBank();
   }
-  // if no more questions
-  //-call fucntion to endGame
-  //else
-  //- renderQuizBank
+
 }
 
+//render quiz questions
 function renderQuizBank() {
   questionAnswer.innerText = "";
   var questions = document.createElement("h2");
@@ -153,10 +149,11 @@ function renderQuizBank() {
   renderChoices();
 }
 
+// render possible answers
 function renderChoices() {
   for (var i = 0; i < quizBank[questionIndex].choices.length; i++) {
     var choiceButton = document.createElement("button");
-    // choiceButtons.setAttribute("style", "background-color:....
+    choiceButton.setAttribute("style","background-color: blue;color: white;margin 20px;margin-top: 10px;margin-right: 10px;margin-left: 10px");
     choiceButton.setAttribute("value", quizBank[questionIndex].choices[i]);
     choiceButton.onclick = checkResponse;
     choiceButton.textContent = quizBank[questionIndex].choices[i];
@@ -164,4 +161,5 @@ function renderChoices() {
   }
 }
 
-questionAnswer.addEventListener("click", function (event) {});
+
+
