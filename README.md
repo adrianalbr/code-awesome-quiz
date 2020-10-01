@@ -26,7 +26,9 @@ The user has an allocated time to answer all questions, as the user submit his/h
 
 ## How it works - 
 
-![code-awesome-quiz](images/length.jpeg)
+click the button to start
+
+![code-awesome-quiz](images/start.jpeg)
 
 
 

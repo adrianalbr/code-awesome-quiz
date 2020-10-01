@@ -148,7 +148,7 @@ if (questionIndex === quizBank.length) {
     // if there are more question continue  
     renderQuizBank();
   }
-  },1500)
+  },1000)
 }
 
 //render quiz questions
