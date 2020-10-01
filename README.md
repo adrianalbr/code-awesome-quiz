@@ -30,8 +30,9 @@ click the button to start
 
 ![code-awesome-quiz](images/start.jpeg)
 
+Then you will be presented with questions
 
-
+At the end you will be asked to enter your initials and your score will be logged
 
 - - -
 © 2020 Adriana Bonilla-Ramirez. All Rights Reserved.

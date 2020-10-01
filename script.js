@@ -1,4 +1,4 @@
-// console.log("this works somehow");
+
 // array of objects for the questions and answers
 var quizBank = [
   {
@@ -61,7 +61,7 @@ var questionIndex = 0;
 // submit button when quiz ends
 document.getElementById("submitBtn").addEventListener("click", function (e) {
   e.preventDefault();
-//   console.log("clicked");
+
   var initials = document.getElementById("inputRes").value;
         console.log(initials, timeLeft);
   var obj = {
@@ -97,8 +97,6 @@ function countDown() {
     endGame();
 
     alert ("GAME OVER TIME RAN OUT");
-
-    // console.log("GAME OVER TIME RAN OUT");
   }
 }
 //start timer
@@ -112,7 +110,7 @@ function endGame() {
   form.style.display = "block";
   console.log("score", timeLeft);
   document.getElementById("score").textContent = timeLeft;
-  //localStorage.setItem("score", timeLeft);
+  localStorage.setItem("score", timeLeft);
 }
 
 // check responses
@@ -127,13 +125,13 @@ function checkResponse() {
         createDiv.setAttribute("id", "createDiv");
         createDiv.textContent = "Incorrect!"
         rightWrong.appendChild(createDiv);
-    // alert("Incorrect");
+    
   } else {
     var createDiv = document.createElement("div");
         createDiv.setAttribute("id", "createDiv");
         createDiv.textContent = "Correct!"
         rightWrong.appendChild(createDiv);
-    // alert("Correct");
+    
   }
   
   questionIndex++;
@@ -163,7 +161,7 @@ function renderQuizBank() {
 
 // render possible answers
 function renderChoices() {
-  for (var i = 0; i < quizBank[questionIndex].choices.length; i++) {
+  for (var i = 0; i <quizBank[questionIndex].choices.length; i++) {
     var choiceButton = document.createElement("button");
     choiceButton.className = "btn btn-primary btn-lg";
     choiceButton.id = "answerButton"
