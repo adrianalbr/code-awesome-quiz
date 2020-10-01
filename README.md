@@ -32,7 +32,16 @@ click the button to start
 
 Then you will be presented with questions
 
+![code-awesome-quiz](images/questions.jpeg)
+
 At the end you will be asked to enter your initials and your score will be logged
+
+![code-awesome-quiz](images/score-initials.jpeg)
+
+And then you will be shown the highest scores
+
+![code-awesome-quiz](images/Highscores.jpeg)
+
 
 - - -
 © 2020 Adriana Bonilla-Ramirez. All Rights Reserved.

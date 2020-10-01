@@ -71,7 +71,7 @@ document.getElementById("submitBtn").addEventListener("click", function (e) {
   scores.push(obj);
 
   localStorage.setItem("highScores", JSON.stringify(scores));
-    window.location.replace("./highScores.html");
+    window.location.replace("scores.html");
 });
 
 // Start button for the quiz to begin
