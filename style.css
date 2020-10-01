@@ -1,5 +1,5 @@
 
-
+/* Style for container */
 .container{
     width: 100%;
     padding-right: 15px;
@@ -16,7 +16,7 @@
     margin-right: 0px;
 }
 
-
+/* Style for answer buttons */
 #answerButton{
     margin-left: 10px;
     margin-right: 10px;
@@ -38,5 +38,11 @@
     margin-right: 100px;
 }
 
+#start-quiz{
+    margin-top: 30px;
+}
 
+#right-wrong{
+    float: right;
+}
 

@@ -48,6 +48,7 @@ var timerDisplayP = document.getElementById("timerWrap");
 timerDisplayP.style.display = "none";
 var form = document.getElementById("formDiv");
 form.style.display = "none";
+var rightWrong = document.getElementById("right-wrong");
 
 var scores = JSON.parse(localStorage.getItem("highscores")) || [];
 var score = 0;
@@ -70,7 +71,7 @@ document.getElementById("submitBtn").addEventListener("click", function (e) {
   scores.push(obj);
 
   localStorage.setItem("highScores", JSON.stringify(scores));
-  window.location.replace("./highScores.html");
+    window.location.replace("./highScores.html");
 });
 
 // Start button for the quiz to begin
@@ -122,19 +123,24 @@ function checkResponse() {
   if (res !== quizBank[questionIndex].answer) {
     //if incorrect deduct 10 from time left
     timeLeft = timeLeft - penalty;
-        // var createDiv = document.createElement("div");
-        // createDiv.setAttribute("id", "createDiv");
-        // createDiv.textContent = "Incorrect!"
-    alert("Incorrect");
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+        createDiv.textContent = "Incorrect!"
+        rightWrong.appendChild(createDiv);
+    // alert("Incorrect");
   } else {
-    // createDiv.textContent = "Correct!"
-    alert("Correct");
+    var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+        createDiv.textContent = "Correct!"
+        rightWrong.appendChild(createDiv);
+    // alert("Correct");
   }
   
   questionIndex++;
-
-  //condition to check to see if we have any more questions to ask
-  if (questionIndex === quizBank.length) {
+  setTimeout(function(){
+      createDiv.textContent = ""
+//condition to check to see if we have any more questions to ask
+if (questionIndex === quizBank.length) {
     clearInterval(interval);
     //if we ran out of questions then end the game
     endGame();
@@ -142,7 +148,7 @@ function checkResponse() {
     // if there are more question continue  
     renderQuizBank();
   }
-
+  },1500)
 }
 
 //render quiz questions
